@@ -1,8 +1,8 @@
 # README
 
-Esta API es creada de forma muy sencilla aplicando algunos conocimientos de Ruby on rails.
+This API is very easily created by applying some knowledge of Ruby on Rails.
 
-/api/v1/users -> Con unica ruta para poder visualizar todos los usuarios con sus libros y autores.
+/api/v1/users -> With a single path to see all users with their books and authors.
 
 Things you may want to know:
 
