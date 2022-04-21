@@ -1,8 +1,19 @@
-user = User.create(name: 'Santiago', email: 'santiagodelafuente2013@gmail.com')
-book1 = user.books.create(title: 'Functional Programming', gender: 'programming')
-book2 = user.books.create(title: 'Object-oriented programming', gender: 'programming')
+# frozen_string_literal: true
 
-author1 = book1.authors.create(name: 'Jerry', lastname: 'Smith')
-author2 = book2.authors.create(name: 'Francis', lastname: 'Myers')
+# Create user1
+user1 = User.create(name: 'Santiago', email: 'santiagodelafuente2013@gmail.com')
 
-# Book.authors.create(name: "Sergio Augusto", lastname: "Cardona")
+# Create books for user1
+book1 = user1.books.create(title: 'Functional Programming', gender: 'programming')
+book2 = user1.books.create(title: 'Object-oriented programming', gender: 'programming')
+# ...
+
+# Create authors for book1
+book1.authors.create(book_id: book1.id, name: 'Jerry', lastname: 'Smith')
+book1.authors.create(book_id: book1.id, name: 'Francis', lastname: 'Myers')
+# ...
+
+# Create authors for book2
+book2.authors.create(book_id: book2.id, name: 'Jhon', lastname: 'William')
+book2.authors.create(book_id: book2.id, name: 'Petter', lastname: 'Hoffman')
+# ...
