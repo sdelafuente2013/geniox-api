@@ -9,26 +9,21 @@ RSpec.describe User, :type => :model do
     user = User.new(email: nil)
     expect(user).to_not be_valid
   end
-end
 
-RSpec.describe Book, :type => :model do
-  it "is not valid without a title" do
-    book = Book.new(title: nil)
-    expect(book).to_not be_valid
-  end
-  it "is not valid without a gender" do
-    book = Book.new(gender: nil)
-    expect(book).to_not be_valid
-  end
-end
+  subject {
+    described_class.new(name: 'John', email: 'john@home.xyz')
+  }
 
-RSpec.describe Author, :type => :model do
-  it "is not valid without a name" do
-    author = Author.new(name: nil)
-    expect(author).to_not be_valid
-  end
-  it "is not valid without a lastname" do
-    author = Author.new(lastname: nil)
-    expect(author).to_not be_valid
+  describe 'validation for email:' do
+    context '=> when email is not unique' do
+      before { described_class.create!(name: 'foo', email: 'john@home.xyz') }
+      it {expect(subject).to be_invalid}
+    end
+
+    context '=> when email is  unique' do
+      before { described_class.create!(name: 'foo', email: 'jane@home.xyz') }
+      it {expect(subject).to be_valid}
+    end
+
   end
 end
