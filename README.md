@@ -16,4 +16,6 @@ Things you may want to know:
 
 * How to run the test suite => bundle exec rspec
 
+* IDE => RubyMine professional edition
+
 * ...
