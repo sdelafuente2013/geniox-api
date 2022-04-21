@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta API es creada de forma muy sencilla aplicando algunos conocimientos de Ruby on rails.
 
-Things you may want to cover:
+/api/v1/users -> Con unica ruta para poder visualizar todos los usuarios con sus libros y autores.
 
-* Ruby version
+Things you may want to know:
 
-* System dependencies
+* Ruby version => 2.7.0 
 
-* Configuration
+* Ruby on Rails version => 6.1.5
 
-* Database creation
+* System dependencies => Debian GNU/Linux 11 (bullseye)
 
-* Database initialization
+* Database creation => PostgreSQL
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* How to run the test suite => bundle exec rspec
 
 * ...
